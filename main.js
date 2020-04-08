@@ -6,6 +6,7 @@ const die5 = document.createElement("img")
 const die6 = document.createElement("img")
 const dieDiv = document.querySelector(".die")
 const button = document.querySelector("button")
+const audio = document.querySelector("audio")
 
 die1.setAttribute("src", "src/noun_One Dice_1986609.png")
 die2.setAttribute("src", "src/noun_two dice_1986607.png")
@@ -20,6 +21,7 @@ button.addEventListener("click", rollDie)
 
 function rollDie(){
     let timeRun = 0;
+    audio.play();
     let intervalID = setInterval(function(){
         const currentDie = dieDiv.children[0];
         dieDiv.removeChild(currentDie);
